@@ -130,8 +130,7 @@ For <code>dbBindArrow()</code>, values as a nanoarrow stream, with one column pe
     <p><code>dbBind()</code> returns the result set,
 invisibly,
 for queries issued by <code><a href="dbSendQuery.html">dbSendQuery()</a></code> or <code><a href="dbSendQueryArrow.html">dbSendQueryArrow()</a></code> and
-also for data manipulation statements issued by
-<code><a href="dbSendStatement.html">dbSendStatement()</a></code>.</p>
+also for data manipulation statements issued by <code><a href="dbSendStatement.html">dbSendStatement()</a></code>.</p>
     </div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
@@ -246,9 +245,7 @@ all parameter values must have names
 or <code>NA</code>),
 and vice versa,
 otherwise an error is raised.
-The behavior for mixing placeholders of different types
-(in particular mixing positional and named placeholders)
-is not specified.</p>
+The behavior for mixing placeholders of different types (in particular mixing positional and named placeholders) is not specified.</p>
 <p>Calling <code>dbBind()</code> on a result set already cleared by <code><a href="dbClearResult.html">dbClearResult()</a></code>
 also raises an error.</p>
     </div>
@@ -257,14 +254,11 @@ also raises an error.</p>
 
 
 
-<p><span class="pkg">DBI</span> clients execute parametrized statements as follows:</p><ol><li><p>Call <code><a href="dbSendQuery.html">dbSendQuery()</a></code>, <code><a href="dbSendQueryArrow.html">dbSendQueryArrow()</a></code> or <code><a href="dbSendStatement.html">dbSendStatement()</a></code>
-with a query or statement that contains placeholders,
+<p><span class="pkg">DBI</span> clients execute parametrized statements as follows:</p><ol><li><p>Call <code><a href="dbSendQuery.html">dbSendQuery()</a></code>, <code><a href="dbSendQueryArrow.html">dbSendQueryArrow()</a></code> or <code><a href="dbSendStatement.html">dbSendStatement()</a></code> with a query or statement that contains placeholders,
 store the returned <a href="DBIResult-class.html">DBIResult</a> object in a variable.
-Mixing placeholders (in particular, named and unnamed ones) is not
-recommended.
-It is good practice to register a call to <code><a href="dbClearResult.html">dbClearResult()</a></code> via
-<code><a href="https://rdrr.io/r/base/on.exit.html" class="external-link">on.exit()</a></code> right after calling <code><a href="dbSendQuery.html">dbSendQuery()</a></code> or <code><a href="dbSendStatement.html">dbSendStatement()</a></code>
-(see the last enumeration item).
+Mixing placeholders (in particular, named and unnamed ones) is not recommended.
+It is good practice to register a call to <code><a href="dbClearResult.html">dbClearResult()</a></code> via <code><a href="https://rdrr.io/r/base/on.exit.html" class="external-link">on.exit()</a></code> right after calling <code><a href="dbSendQuery.html">dbSendQuery()</a></code>
+or <code><a href="dbSendStatement.html">dbSendStatement()</a></code> (see the last enumeration item).
 Until <code>dbBind()</code> or <code>dbBindArrow()</code> have been called,
 the returned result set object has the following behavior:</p><ul><li><p><code><a href="dbFetch.html">dbFetch()</a></code> raises an error (for <code><a href="dbSendQuery.html">dbSendQuery()</a></code> and <code><a href="dbSendQueryArrow.html">dbSendQueryArrow()</a></code>)</p></li>
 <li><p><code><a href="dbGetRowCount.html">dbGetRowCount()</a></code> returns zero (for <code><a href="dbSendQuery.html">dbSendQuery()</a></code> and <code><a href="dbSendQueryArrow.html">dbSendQueryArrow()</a></code>)</p></li>
@@ -272,11 +266,10 @@ the returned result set object has the following behavior:</p><ul><li><p><code><
 <li><p><code><a href="dbIsValid.html">dbIsValid()</a></code> returns <code>TRUE</code></p></li>
 <li><p><code><a href="dbHasCompleted.html">dbHasCompleted()</a></code> returns <code>FALSE</code></p></li>
 </ul></li>
-<li><p>Call <code>dbBind()</code> or <code>dbBindArrow()</code>:</p><ul><li><p>For <code>dbBind()</code>, the <code>params</code> argument must be a list where all elements
-have the same lengths and contain values supported by the backend.
+<li><p>Call <code>dbBind()</code> or <code>dbBindArrow()</code>:</p><ul><li><p>For <code>dbBind()</code>, the <code>params</code> argument must be a list where all elements have the same lengths
+and contain values supported by the backend.
 A <a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a> is internally stored as such a list.</p></li>
-<li><p>For <code>dbBindArrow()</code>, the <code>params</code> argument must be a
-nanoarrow array stream, with one column per query parameter.</p></li>
+<li><p>For <code>dbBindArrow()</code>, the <code>params</code> argument must be a nanoarrow array stream, with one column per query parameter.</p></li>
 </ul></li>
 <li><p>Retrieve the data or the number of affected rows from the <code>DBIResult</code> object.</p><ul><li><p>For queries issued by <code><a href="dbSendQuery.html">dbSendQuery()</a></code> or <code><a href="dbSendQueryArrow.html">dbSendQueryArrow()</a></code>, call <code><a href="dbFetch.html">dbFetch()</a></code>.</p></li>
 <li><p>For statements issued by <code>dbSendStatements()</code>,
@@ -290,11 +283,9 @@ the statement is processed entirely before the function returns.)</p></li>
 vectors of arbitrary length
 (including length 0)
 are supported.
-For queries, calling <code><a href="dbFetch.html">dbFetch()</a></code> binding such parameters returns
-concatenated results, equivalent to binding and fetching for each set
-of values and connecting via <code><a href="https://rdrr.io/r/base/cbind.html" class="external-link">rbind()</a></code>.
-For data manipulation statements, <code><a href="dbGetRowsAffected.html">dbGetRowsAffected()</a></code> returns the
-total number of rows affected if binding non-scalar parameters.
+For queries, calling <code><a href="dbFetch.html">dbFetch()</a></code> binding such parameters returns concatenated results,
+equivalent to binding and fetching for each set of values and connecting via <code><a href="https://rdrr.io/r/base/cbind.html" class="external-link">rbind()</a></code>.
+For data manipulation statements, <code><a href="dbGetRowsAffected.html">dbGetRowsAffected()</a></code> returns the total number of rows affected if binding non-scalar parameters.
 <code>dbBind()</code> also accepts repeated calls on the same result set
 for both queries
 and data manipulation statements,

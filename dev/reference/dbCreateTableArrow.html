@@ -114,8 +114,7 @@ or invalid connection.
 An error is also raised
 if <code>name</code> cannot be processed with <code><a href="dbQuoteIdentifier.html">dbQuoteIdentifier()</a></code> or
 if this results in a non-scalar.
-Invalid values for the <code>temporary</code> argument
-(non-scalars,
+Invalid values for the <code>temporary</code> argument (non-scalars,
 unsupported data types,
 <code>NA</code>,
 incompatible values,
@@ -147,8 +146,7 @@ perhaps by calling <code>dbQuoteIdentifier(conn, x = name)</code></p></li>
 <li><p>a nanoarrow array stream
 (which will still contain the data after the call)</p></li>
 <li><p>a nanoarrow schema</p></li>
-</ul><p>If the <code>temporary</code> argument is <code>TRUE</code>, the table is not available in a
-second connection and is gone after reconnecting.
+</ul><p>If the <code>temporary</code> argument is <code>TRUE</code>, the table is not available in a second connection and is gone after reconnecting.
 Not all backends support this argument.
 A regular, non-temporary table is visible in a second connection,
 in a pre-existing connection,

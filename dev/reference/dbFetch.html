@@ -124,14 +124,12 @@ Some implementations may recognize other special values.</p></dd>
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p><code>dbFetch()</code> always returns a <a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a> with
-as many rows as records were fetched and as many
-columns as fields in the result set,
+    <p><code>dbFetch()</code> always returns a <a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a> with as many rows as records were fetched and as many columns as fields in the result set,
 even if the result is a single value
 or has one
 or zero rows.
-Passing <code>n = NA</code> is supported and returns an arbitrary number of rows (at least one)
-as specified by the driver, but at most the remaining rows in the result set.</p>
+Passing <code>n = NA</code> is supported and returns an arbitrary number of rows (at least one) as specified by the driver,
+but at most the remaining rows in the result set.</p>
     </div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
@@ -174,12 +172,10 @@ to ensure that this step is always executed.</p></li>
 
 
 <p>An attempt to fetch from a closed result set raises an error.
-If the <code>n</code> argument is not an atomic whole number
-greater or equal to -1 or Inf, an error is raised,
+If the <code>n</code> argument is not an atomic whole number greater or equal to -1 or Inf, an error is raised,
 but a subsequent call to <code>dbFetch()</code> with proper <code>n</code> argument succeeds.</p>
-<p>Calling <code>dbFetch()</code> on a result set from a data manipulation query
-created by <code><a href="dbSendStatement.html">dbSendStatement()</a></code> can
-be fetched and return an empty data frame, with a warning.</p>
+<p>Calling <code>dbFetch()</code> on a result set from a data manipulation query created by <code><a href="dbSendStatement.html">dbSendStatement()</a></code> can be fetched
+and return an empty data frame, with a warning.</p>
     </div>
     <div class="section level2">
     <h2 id="specification">Specification<a class="anchor" aria-label="anchor" href="#specification"></a></h2>
@@ -192,14 +188,10 @@ Multi-row queries can also be fetched progressively
 by passing a whole number (<a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a> or
 <a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric</a>)
 as the <code>n</code> argument.
-A value of <a href="https://rdrr.io/r/base/is.finite.html" class="external-link">Inf</a> for the <code>n</code> argument is supported
-and also returns the full result.
-If more rows than available are fetched, the result is returned in full
-without warning.
-If fewer rows than requested are returned, further fetches will
-return a data frame with zero rows.
-If zero rows are fetched, the columns of the data frame are still fully
-typed.
+A value of <a href="https://rdrr.io/r/base/is.finite.html" class="external-link">Inf</a> for the <code>n</code> argument is supported and also returns the full result.
+If more rows than available are fetched, the result is returned in full without warning.
+If fewer rows than requested are returned, further fetches will return a data frame with zero rows.
+If zero rows are fetched, the columns of the data frame are still fully typed.
 Fetching fewer rows than available is permitted,
 no warning is issued when clearing the result set.</p>
 <p>A column named <code>row_names</code> is treated like any other column.</p>
@@ -225,21 +217,17 @@ with NA for SQL <code>NULL</code> values
 <li><p>coercible using <code><a href="https://rdrr.io/r/base/as.POSIXlt.html" class="external-link">as.POSIXct()</a></code> for timestamps,
 with NA for SQL <code>NULL</code> values
 (also applies to the return value of the SQL function <code>current_timestamp</code>)</p></li>
-</ul><p>If dates and timestamps are supported by the backend, the following R types are
-used:</p><ul><li><p><a href="https://rdrr.io/r/base/Dates.html" class="external-link">Date</a> for dates
+</ul><p>If dates and timestamps are supported by the backend, the following R types are used:</p><ul><li><p><a href="https://rdrr.io/r/base/Dates.html" class="external-link">Date</a> for dates
 (also applies to the return value of the SQL function <code>current_date</code>)</p></li>
 <li><p><a href="https://rdrr.io/r/base/DateTimeClasses.html" class="external-link">POSIXct</a> for timestamps
 (also applies to the return value of the SQL function <code>current_timestamp</code>)</p></li>
-</ul><p>R has no built-in type with lossless support for the full range of 64-bit
-or larger integers. If 64-bit integers are returned from a query,
-the following rules apply:</p><ul><li><p>Values are returned in a container with support for the full range of
-valid 64-bit values (such as the <code>integer64</code> class of the <span class="pkg">bit64</span>
-package)</p></li>
-<li><p>Coercion to numeric always returns a number that is as close as possible
-to the true value</p></li>
+</ul><p>R has no built-in type with lossless support for the full range of 64-bit or larger integers.
+If 64-bit integers are returned from a query,
+the following rules apply:</p><ul><li><p>Values are returned in a container with support for the full range of valid 64-bit values
+(such as the <code>integer64</code> class of the <span class="pkg">bit64</span> package)</p></li>
+<li><p>Coercion to numeric always returns a number that is as close as possible to the true value</p></li>
 <li><p>Loss of precision when converting to numeric gives a warning</p></li>
-<li><p>Conversion to character always returns a lossless decimal representation
-of the data</p></li>
+<li><p>Conversion to character always returns a lossless decimal representation of the data</p></li>
 </ul></div>
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
