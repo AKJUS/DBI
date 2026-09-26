@@ -11,6 +11,8 @@ dbBindArrow() is experimental, as are the other *Arrow functions.
 dbSendQuery() is compatible with dbBindArrow(), and dbSendQueryArrow() is compatible with dbBind().
 
 Methods in other packagesThis documentation page describes the generics. Refer to the documentation pages linked below for the documentation for the methods that are implemented in various backend packages.
+adbi::dbBind(&quot;AdbiResult&quot;)
+adbi::dbBind(&quot;AdbiResultArrow&quot;)
 bigrquery::dbBind(&quot;BigQueryResult&quot;)
 duckdb::dbBind(&quot;duckdb_result_arrow&quot;)
 duckdb::dbBind(&quot;duckdb_result&quot;)
@@ -32,6 +34,8 @@ dbBindArrow() is experimental, as are the other *Arrow functions.
 dbSendQuery() is compatible with dbBindArrow(), and dbSendQueryArrow() is compatible with dbBind().
 
 Methods in other packagesThis documentation page describes the generics. Refer to the documentation pages linked below for the documentation for the methods that are implemented in various backend packages.
+adbi::dbBind(&quot;AdbiResult&quot;)
+adbi::dbBind(&quot;AdbiResultArrow&quot;)
 bigrquery::dbBind(&quot;BigQueryResult&quot;)
 duckdb::dbBind(&quot;duckdb_result_arrow&quot;)
 duckdb::dbBind(&quot;duckdb_result&quot;)
@@ -89,7 +93,9 @@ and to <code>dbBindArrow()</code> as a stream created by <code><a href="https://
 <p><code>dbBindArrow()</code> is experimental, as are the other <code>*Arrow</code> functions.
 <code><a href="dbSendQuery.html">dbSendQuery()</a></code> is compatible with <code>dbBindArrow()</code>, and <code><a href="dbSendQueryArrow.html">dbSendQueryArrow()</a></code> is compatible with <code>dbBind()</code>.</p>
 <p></p><div class="section">
-<h3 id="methods-in-other-packages">Methods in other packages<a class="anchor" aria-label="anchor" href="#methods-in-other-packages"></a></h3><p>This documentation page describes the generics. Refer to the documentation pages linked below for the documentation for the methods that are implemented in various backend packages.</p><ul><li><p><code><a href="https://bigrquery.r-dbi.org/reference/DBI.html" class="external-link">bigrquery::dbBind("BigQueryResult")</a></code></p></li>
+<h3 id="methods-in-other-packages">Methods in other packages<a class="anchor" aria-label="anchor" href="#methods-in-other-packages"></a></h3><p>This documentation page describes the generics. Refer to the documentation pages linked below for the documentation for the methods that are implemented in various backend packages.</p><ul><li><p><code><a href="https://adbi.r-dbi.org/reference/AdbiResult-class.html" class="external-link">adbi::dbBind("AdbiResult")</a></code></p></li>
+<li><p><code><a href="https://adbi.r-dbi.org/reference/AdbiResultArrow-class.html" class="external-link">adbi::dbBind("AdbiResultArrow")</a></code></p></li>
+<li><p><code><a href="https://bigrquery.r-dbi.org/reference/DBI.html" class="external-link">bigrquery::dbBind("BigQueryResult")</a></code></p></li>
 <li><p><code><a href="https://r.duckdb.org/reference/duckdb_result_arrow-class.html" class="external-link">duckdb::dbBind("duckdb_result_arrow")</a></code></p></li>
 <li><p><code><a href="https://r.duckdb.org/reference/duckdb_result-class.html" class="external-link">duckdb::dbBind("duckdb_result")</a></code></p></li>
 <li><p><code><a href="https://odbc.r-dbi.org/reference/OdbcResult.html" class="external-link">odbc::dbBind("OdbcResult")</a></code></p></li>

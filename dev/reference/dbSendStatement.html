@@ -6,6 +6,7 @@ You must also call dbClearResult() after that.
 For interactive use, you should almost always prefer dbExecute().
 
 Methods in other packagesThis documentation page describes the generics. Refer to the documentation pages linked below for the documentation for the methods that are implemented in various backend packages.
+adbi::dbSendStatement(&quot;AdbiConnection&quot;, &quot;character&quot;)
 AzureKusto::dbSendStatement(&quot;AzureKustoConnection&quot;, &quot;character&quot;)
 DatabaseConnector::dbSendStatement(&quot;DatabaseConnectorConnection&quot;, &quot;character&quot;)
 dittodb::dbSendStatement(&quot;DBIMockConnection&quot;, &quot;character&quot;)
@@ -22,6 +23,7 @@ You must also call dbClearResult() after that.
 For interactive use, you should almost always prefer dbExecute().
 
 Methods in other packagesThis documentation page describes the generics. Refer to the documentation pages linked below for the documentation for the methods that are implemented in various backend packages.
+adbi::dbSendStatement(&quot;AdbiConnection&quot;, &quot;character&quot;)
 AzureKusto::dbSendStatement(&quot;AzureKustoConnection&quot;, &quot;character&quot;)
 DatabaseConnector::dbSendStatement(&quot;DatabaseConnectorConnection&quot;, &quot;character&quot;)
 dittodb::dbSendStatement(&quot;DBIMockConnection&quot;, &quot;character&quot;)
@@ -74,7 +76,8 @@ To query the number of affected rows, call <code><a href="dbGetRowsAffected.html
 You must also call <code><a href="dbClearResult.html">dbClearResult()</a></code> after that.
 For interactive use, you should almost always prefer <code><a href="dbExecute.html">dbExecute()</a></code>.</p>
 <p></p><div class="section">
-<h3 id="methods-in-other-packages">Methods in other packages<a class="anchor" aria-label="anchor" href="#methods-in-other-packages"></a></h3><p>This documentation page describes the generics. Refer to the documentation pages linked below for the documentation for the methods that are implemented in various backend packages.</p><ul><li><p><code><a href="https://rdrr.io/pkg/AzureKusto/man/DBI_query.html" class="external-link">AzureKusto::dbSendStatement("AzureKustoConnection", "character")</a></code></p></li>
+<h3 id="methods-in-other-packages">Methods in other packages<a class="anchor" aria-label="anchor" href="#methods-in-other-packages"></a></h3><p>This documentation page describes the generics. Refer to the documentation pages linked below for the documentation for the methods that are implemented in various backend packages.</p><ul><li><p><code><a href="https://adbi.r-dbi.org/reference/dbSendQuery.html" class="external-link">adbi::dbSendStatement("AdbiConnection", "character")</a></code></p></li>
+<li><p><code><a href="https://rdrr.io/pkg/AzureKusto/man/DBI_query.html" class="external-link">AzureKusto::dbSendStatement("AzureKustoConnection", "character")</a></code></p></li>
 <li><p><code><a href="https://ohdsi.github.io/DatabaseConnector/reference/dbSendStatement-DatabaseConnectorConnection-character-method.html" class="external-link">DatabaseConnector::dbSendStatement("DatabaseConnectorConnection", "character")</a></code></p></li>
 <li><p><code><a href="https://dittodb.jonkeane.com/reference/mock-db-methods.html" class="external-link">dittodb::dbSendStatement("DBIMockConnection", "character")</a></code></p></li>
 <li><p><code><a href="https://odbc.r-dbi.org/reference/OdbcConnection.html" class="external-link">odbc::dbSendStatement("OdbcConnection", "character")</a></code></p></li>

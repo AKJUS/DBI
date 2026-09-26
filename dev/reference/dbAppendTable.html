@@ -5,6 +5,7 @@ The default implementation calls sqlAppendTableTemplate() and then dbExecute() w
 Use dbAppendTableArrow() to append data from an Arrow stream.
 
 Methods in other packagesThis documentation page describes the generics. Refer to the documentation pages linked below for the documentation for the methods that are implemented in various backend packages.
+adbi::dbAppendTable(&quot;AdbiConnection&quot;, &quot;ANY&quot;, &quot;ANY&quot;)
 bigrquery::dbAppendTable(&quot;BigQueryConnection&quot;, &quot;AsIs&quot;, &quot;data.frame&quot;)
 bigrquery::dbAppendTable(&quot;BigQueryConnection&quot;, &quot;character&quot;, &quot;data.frame&quot;)
 bigrquery::dbAppendTable(&quot;BigQueryConnection&quot;, &quot;Id&quot;, &quot;data.frame&quot;)
@@ -22,6 +23,7 @@ The default implementation calls sqlAppendTableTemplate() and then dbExecute() w
 Use dbAppendTableArrow() to append data from an Arrow stream.
 
 Methods in other packagesThis documentation page describes the generics. Refer to the documentation pages linked below for the documentation for the methods that are implemented in various backend packages.
+adbi::dbAppendTable(&quot;AdbiConnection&quot;, &quot;ANY&quot;, &quot;ANY&quot;)
 bigrquery::dbAppendTable(&quot;BigQueryConnection&quot;, &quot;AsIs&quot;, &quot;data.frame&quot;)
 bigrquery::dbAppendTable(&quot;BigQueryConnection&quot;, &quot;character&quot;, &quot;data.frame&quot;)
 bigrquery::dbAppendTable(&quot;BigQueryConnection&quot;, &quot;Id&quot;, &quot;data.frame&quot;)
@@ -75,7 +77,8 @@ beforehand, e.g. with <code><a href="dbCreateTable.html">dbCreateTable()</a></co
 The default implementation calls <code><a href="sqlAppendTable.html">sqlAppendTableTemplate()</a></code> and then <code><a href="dbExecute.html">dbExecute()</a></code> with the <code>param</code> argument.
 Use <code><a href="dbAppendTableArrow.html">dbAppendTableArrow()</a></code> to append data from an Arrow stream.</p>
 <p></p><div class="section">
-<h3 id="methods-in-other-packages">Methods in other packages<a class="anchor" aria-label="anchor" href="#methods-in-other-packages"></a></h3><p>This documentation page describes the generics. Refer to the documentation pages linked below for the documentation for the methods that are implemented in various backend packages.</p><ul><li><p><code><a href="https://bigrquery.r-dbi.org/reference/DBI.html" class="external-link">bigrquery::dbAppendTable("BigQueryConnection", "AsIs", "data.frame")</a></code></p></li>
+<h3 id="methods-in-other-packages">Methods in other packages<a class="anchor" aria-label="anchor" href="#methods-in-other-packages"></a></h3><p>This documentation page describes the generics. Refer to the documentation pages linked below for the documentation for the methods that are implemented in various backend packages.</p><ul><li><p><code>adbi::dbAppendTable("AdbiConnection", "ANY", "ANY")</code></p></li>
+<li><p><code><a href="https://bigrquery.r-dbi.org/reference/DBI.html" class="external-link">bigrquery::dbAppendTable("BigQueryConnection", "AsIs", "data.frame")</a></code></p></li>
 <li><p><code><a href="https://bigrquery.r-dbi.org/reference/DBI.html" class="external-link">bigrquery::dbAppendTable("BigQueryConnection", "character", "data.frame")</a></code></p></li>
 <li><p><code><a href="https://bigrquery.r-dbi.org/reference/DBI.html" class="external-link">bigrquery::dbAppendTable("BigQueryConnection", "Id", "data.frame")</a></code></p></li>
 <li><p><code>DatabaseConnector::dbAppendTable("DatabaseConnectorConnection", "character", "ANY")</code></p></li>

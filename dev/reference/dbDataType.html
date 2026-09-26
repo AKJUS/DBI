@@ -6,6 +6,8 @@ DBI also provides an implementation for data.frame
 which will return a character vector giving the type for each column in the dataframe.
 
 Methods in other packagesThis documentation page describes the generics. Refer to the documentation pages linked below for the documentation for the methods that are implemented in various backend packages.
+adbi::dbDataType(&quot;AdbiConnection&quot;, &quot;ANY&quot;)
+adbi::dbDataType(&quot;AdbiDriver&quot;, &quot;ANY&quot;)
 bigrquery::dbDataType(&quot;BigQueryConnection&quot;, &quot;ANY&quot;)
 bigrquery::dbDataType(&quot;BigQueryDriver&quot;, &quot;ANY&quot;)
 duckdb::dbDataType(&quot;duckdb_connection&quot;, &quot;ANY&quot;)
@@ -42,6 +44,8 @@ DBI also provides an implementation for data.frame
 which will return a character vector giving the type for each column in the dataframe.
 
 Methods in other packagesThis documentation page describes the generics. Refer to the documentation pages linked below for the documentation for the methods that are implemented in various backend packages.
+adbi::dbDataType(&quot;AdbiConnection&quot;, &quot;ANY&quot;)
+adbi::dbDataType(&quot;AdbiDriver&quot;, &quot;ANY&quot;)
 bigrquery::dbDataType(&quot;BigQueryConnection&quot;, &quot;ANY&quot;)
 bigrquery::dbDataType(&quot;BigQueryDriver&quot;, &quot;ANY&quot;)
 duckdb::dbDataType(&quot;duckdb_connection&quot;, &quot;ANY&quot;)
@@ -114,7 +118,9 @@ which may serve as a starting point for driver implementations.
 DBI also provides an implementation for data.frame
 which will return a character vector giving the type for each column in the dataframe.</p>
 <p></p><div class="section">
-<h3 id="methods-in-other-packages">Methods in other packages<a class="anchor" aria-label="anchor" href="#methods-in-other-packages"></a></h3><p>This documentation page describes the generics. Refer to the documentation pages linked below for the documentation for the methods that are implemented in various backend packages.</p><ul><li><p><code>bigrquery::dbDataType("BigQueryConnection", "ANY")</code></p></li>
+<h3 id="methods-in-other-packages">Methods in other packages<a class="anchor" aria-label="anchor" href="#methods-in-other-packages"></a></h3><p>This documentation page describes the generics. Refer to the documentation pages linked below for the documentation for the methods that are implemented in various backend packages.</p><ul><li><p><code>adbi::dbDataType("AdbiConnection", "ANY")</code></p></li>
+<li><p><code>adbi::dbDataType("AdbiDriver", "ANY")</code></p></li>
+<li><p><code>bigrquery::dbDataType("BigQueryConnection", "ANY")</code></p></li>
 <li><p><code>bigrquery::dbDataType("BigQueryDriver", "ANY")</code></p></li>
 <li><p><code>duckdb::dbDataType("duckdb_connection", "ANY")</code></p></li>
 <li><p><code>duckdb::dbDataType("duckdb_driver", "ANY")</code></p></li>

@@ -3,6 +3,9 @@
 optionally converting row names to a column and specifying SQL data types for fields.
 
 Methods in other packagesThis documentation page describes the generics. Refer to the documentation pages linked below for the documentation for the methods that are implemented in various backend packages.
+adbi::dbWriteTable(&quot;AdbiConnection&quot;, &quot;character&quot;, &quot;data.frame&quot;)
+adbi::dbWriteTable(&quot;AdbiConnection&quot;, &quot;Id&quot;, &quot;data.frame&quot;)
+adbi::dbWriteTable(&quot;AdbiConnection&quot;, &quot;SQL&quot;, &quot;data.frame&quot;)
 AzureKusto::dbWriteTable(&quot;AzureKustoConnection&quot;, &quot;ANY&quot;, &quot;ANY&quot;)
 bigrquery::dbWriteTable(&quot;BigQueryConnection&quot;, &quot;AsIs&quot;, &quot;data.frame&quot;)
 bigrquery::dbWriteTable(&quot;BigQueryConnection&quot;, &quot;character&quot;, &quot;data.frame&quot;)
@@ -35,6 +38,9 @@ sparklyr::dbWriteTable(&quot;spark_connection&quot;, &quot;ANY&quot;, &quot;ANY&
 optionally converting row names to a column and specifying SQL data types for fields.
 
 Methods in other packagesThis documentation page describes the generics. Refer to the documentation pages linked below for the documentation for the methods that are implemented in various backend packages.
+adbi::dbWriteTable(&quot;AdbiConnection&quot;, &quot;character&quot;, &quot;data.frame&quot;)
+adbi::dbWriteTable(&quot;AdbiConnection&quot;, &quot;Id&quot;, &quot;data.frame&quot;)
+adbi::dbWriteTable(&quot;AdbiConnection&quot;, &quot;SQL&quot;, &quot;data.frame&quot;)
 AzureKusto::dbWriteTable(&quot;AzureKustoConnection&quot;, &quot;ANY&quot;, &quot;ANY&quot;)
 bigrquery::dbWriteTable(&quot;BigQueryConnection&quot;, &quot;AsIs&quot;, &quot;data.frame&quot;)
 bigrquery::dbWriteTable(&quot;BigQueryConnection&quot;, &quot;character&quot;, &quot;data.frame&quot;)
@@ -103,7 +109,10 @@ sparklyr::dbWriteTable(&quot;spark_connection&quot;, &quot;ANY&quot;, &quot;ANY&
     <p>Writes, overwrites or appends a data frame to a database table,
 optionally converting row names to a column and specifying SQL data types for fields.</p>
 <p></p><div class="section">
-<h3 id="methods-in-other-packages">Methods in other packages<a class="anchor" aria-label="anchor" href="#methods-in-other-packages"></a></h3><p>This documentation page describes the generics. Refer to the documentation pages linked below for the documentation for the methods that are implemented in various backend packages.</p><ul><li><p><code>AzureKusto::dbWriteTable("AzureKustoConnection", "ANY", "ANY")</code></p></li>
+<h3 id="methods-in-other-packages">Methods in other packages<a class="anchor" aria-label="anchor" href="#methods-in-other-packages"></a></h3><p>This documentation page describes the generics. Refer to the documentation pages linked below for the documentation for the methods that are implemented in various backend packages.</p><ul><li><p><code><a href="https://adbi.r-dbi.org/reference/AdbiConnection-class.html" class="external-link">adbi::dbWriteTable("AdbiConnection", "character", "data.frame")</a></code></p></li>
+<li><p><code><a href="https://adbi.r-dbi.org/reference/AdbiConnection-class.html" class="external-link">adbi::dbWriteTable("AdbiConnection", "Id", "data.frame")</a></code></p></li>
+<li><p><code><a href="https://adbi.r-dbi.org/reference/AdbiConnection-class.html" class="external-link">adbi::dbWriteTable("AdbiConnection", "SQL", "data.frame")</a></code></p></li>
+<li><p><code>AzureKusto::dbWriteTable("AzureKustoConnection", "ANY", "ANY")</code></p></li>
 <li><p><code><a href="https://bigrquery.r-dbi.org/reference/DBI.html" class="external-link">bigrquery::dbWriteTable("BigQueryConnection", "AsIs", "data.frame")</a></code></p></li>
 <li><p><code><a href="https://bigrquery.r-dbi.org/reference/DBI.html" class="external-link">bigrquery::dbWriteTable("BigQueryConnection", "character", "data.frame")</a></code></p></li>
 <li><p><code><a href="https://bigrquery.r-dbi.org/reference/DBI.html" class="external-link">bigrquery::dbWriteTable("BigQueryConnection", "Id", "data.frame")</a></code></p></li>

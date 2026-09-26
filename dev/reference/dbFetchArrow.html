@@ -4,6 +4,7 @@ Fetch the result set and return it as an Arrow object.
 Use dbFetchArrowChunk() to fetch results in chunks.
 
 Methods in other packagesThis documentation page describes the generics. Refer to the documentation pages linked below for the documentation for the methods that are implemented in various backend packages.
+adbi::dbFetchArrow(&quot;AdbiResultArrow&quot;)
 duckdb::dbFetchArrow(&quot;duckdb_result_arrow&quot;)
 
 "><meta property="og:description" content="
@@ -11,6 +12,7 @@ Fetch the result set and return it as an Arrow object.
 Use dbFetchArrowChunk() to fetch results in chunks.
 
 Methods in other packagesThis documentation page describes the generics. Refer to the documentation pages linked below for the documentation for the methods that are implemented in various backend packages.
+adbi::dbFetchArrow(&quot;AdbiResultArrow&quot;)
 duckdb::dbFetchArrow(&quot;duckdb_result_arrow&quot;)
 
 "><meta name="robots" content="noindex"><script src="https://cdn.jsdelivr.net/gh/posit-dev/supported-by-posit/js/badge.min.js" data-max-height="43" data-light-bg="#666f76" data-light-fg="#f9f9f9"></script></head><body>
@@ -54,7 +56,8 @@ duckdb::dbFetchArrow(&quot;duckdb_result_arrow&quot;)
 <p>Fetch the result set and return it as an Arrow object.
 Use <code><a href="dbFetchArrowChunk.html">dbFetchArrowChunk()</a></code> to fetch results in chunks.</p>
 <p></p><div class="section">
-<h3 id="methods-in-other-packages">Methods in other packages<a class="anchor" aria-label="anchor" href="#methods-in-other-packages"></a></h3><p>This documentation page describes the generics. Refer to the documentation pages linked below for the documentation for the methods that are implemented in various backend packages.</p><ul><li><p><code><a href="https://r.duckdb.org/reference/duckdb_result_arrow-class.html" class="external-link">duckdb::dbFetchArrow("duckdb_result_arrow")</a></code></p></li>
+<h3 id="methods-in-other-packages">Methods in other packages<a class="anchor" aria-label="anchor" href="#methods-in-other-packages"></a></h3><p>This documentation page describes the generics. Refer to the documentation pages linked below for the documentation for the methods that are implemented in various backend packages.</p><ul><li><p><code><a href="https://adbi.r-dbi.org/reference/AdbiResultArrow-class.html" class="external-link">adbi::dbFetchArrow("AdbiResultArrow")</a></code></p></li>
+<li><p><code><a href="https://r.duckdb.org/reference/duckdb_result_arrow-class.html" class="external-link">duckdb::dbFetchArrow("duckdb_result_arrow")</a></code></p></li>
 </ul></div>
     </div>
 
@@ -121,7 +124,11 @@ to ensure that this step is always executed.</p></li>
 or more columns by default returns the entire result.
 The object returned by <code>dbFetchArrow()</code> can also be passed to <code><a href="https://arrow.apache.org/nanoarrow/latest/r/reference/as_nanoarrow_array_stream.html" class="external-link">nanoarrow::as_nanoarrow_array_stream()</a></code>
 to create a nanoarrow array stream object that can be used to read the result set in batches.
-The chunk size is implementation-specific.</p>
+The chunk size is implementation-specific.
+The schema of the result is available before any batch is consumed:
+<code><a href="https://arrow.apache.org/nanoarrow/latest/r/reference/as_nanoarrow_schema.html" class="external-link">nanoarrow::infer_nanoarrow_schema()</a></code> applied to the object returned by <code>dbFetchArrow()</code>
+gives a struct schema with one child per column, named like the columns.
+Inspecting the schema does not consume the stream.</p>
     </div>
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>

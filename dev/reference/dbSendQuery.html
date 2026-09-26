@@ -6,6 +6,7 @@ For interactive use, you should almost always prefer dbGetQuery().
 Use dbSendQueryArrow() or dbGetQueryArrow() instead to retrieve the results as an Arrow object.
 
 Methods in other packagesThis documentation page describes the generics. Refer to the documentation pages linked below for the documentation for the methods that are implemented in various backend packages.
+adbi::dbSendQuery(&quot;AdbiConnection&quot;, &quot;character&quot;)
 AzureKusto::dbSendQuery(&quot;AzureKustoConnection&quot;, &quot;ANY&quot;)
 bigrquery::dbSendQuery(&quot;BigQueryConnection&quot;, &quot;character&quot;)
 DatabaseConnector::dbSendQuery(&quot;DatabaseConnectorDbiConnection&quot;, &quot;character&quot;)
@@ -34,6 +35,7 @@ For interactive use, you should almost always prefer dbGetQuery().
 Use dbSendQueryArrow() or dbGetQueryArrow() instead to retrieve the results as an Arrow object.
 
 Methods in other packagesThis documentation page describes the generics. Refer to the documentation pages linked below for the documentation for the methods that are implemented in various backend packages.
+adbi::dbSendQuery(&quot;AdbiConnection&quot;, &quot;character&quot;)
 AzureKusto::dbSendQuery(&quot;AzureKustoConnection&quot;, &quot;ANY&quot;)
 bigrquery::dbSendQuery(&quot;BigQueryConnection&quot;, &quot;character&quot;)
 DatabaseConnector::dbSendQuery(&quot;DatabaseConnectorDbiConnection&quot;, &quot;character&quot;)
@@ -98,7 +100,8 @@ and then you must call <code><a href="dbClearResult.html">dbClearResult()</a></c
 For interactive use, you should almost always prefer <code><a href="dbGetQuery.html">dbGetQuery()</a></code>.
 Use <code><a href="dbSendQueryArrow.html">dbSendQueryArrow()</a></code> or <code><a href="dbGetQueryArrow.html">dbGetQueryArrow()</a></code> instead to retrieve the results as an Arrow object.</p>
 <p></p><div class="section">
-<h3 id="methods-in-other-packages">Methods in other packages<a class="anchor" aria-label="anchor" href="#methods-in-other-packages"></a></h3><p>This documentation page describes the generics. Refer to the documentation pages linked below for the documentation for the methods that are implemented in various backend packages.</p><ul><li><p><code>AzureKusto::dbSendQuery("AzureKustoConnection", "ANY")</code></p></li>
+<h3 id="methods-in-other-packages">Methods in other packages<a class="anchor" aria-label="anchor" href="#methods-in-other-packages"></a></h3><p>This documentation page describes the generics. Refer to the documentation pages linked below for the documentation for the methods that are implemented in various backend packages.</p><ul><li><p><code><a href="https://adbi.r-dbi.org/reference/dbSendQuery.html" class="external-link">adbi::dbSendQuery("AdbiConnection", "character")</a></code></p></li>
+<li><p><code>AzureKusto::dbSendQuery("AzureKustoConnection", "ANY")</code></p></li>
 <li><p><code><a href="https://bigrquery.r-dbi.org/reference/DBI.html" class="external-link">bigrquery::dbSendQuery("BigQueryConnection", "character")</a></code></p></li>
 <li><p><code><a href="https://ohdsi.github.io/DatabaseConnector/reference/dbSendQuery-DatabaseConnectorDbiConnection-character-method.html" class="external-link">DatabaseConnector::dbSendQuery("DatabaseConnectorDbiConnection", "character")</a></code></p></li>
 <li><p><code><a href="https://ohdsi.github.io/DatabaseConnector/reference/dbSendQuery-DatabaseConnectorJdbcConnection-character-method.html" class="external-link">DatabaseConnector::dbSendQuery("DatabaseConnectorJdbcConnection", "character")</a></code></p></li>

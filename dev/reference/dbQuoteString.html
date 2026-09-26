@@ -3,6 +3,8 @@
 to make sure that you generate valid SQL and protect against SQL injection attacks.
 
 Methods in other packagesThis documentation page describes the generics. Refer to the documentation pages linked below for the documentation for the methods that are implemented in various backend packages.
+adbi::dbQuoteString(&quot;AdbiConnection&quot;, &quot;character&quot;)
+adbi::dbQuoteString(&quot;AdbiConnection&quot;, &quot;SQL&quot;)
 bigrquery::dbQuoteString(&quot;BigQueryConnection&quot;, &quot;character&quot;)
 bigrquery::dbQuoteString(&quot;BigQueryConnection&quot;, &quot;SQL&quot;)
 DatabaseConnector::dbQuoteString(&quot;DatabaseConnectorConnection&quot;, &quot;character&quot;)
@@ -27,6 +29,8 @@ sparklyr::dbQuoteString(&quot;spark_connection&quot;, &quot;character&quot;)
 to make sure that you generate valid SQL and protect against SQL injection attacks.
 
 Methods in other packagesThis documentation page describes the generics. Refer to the documentation pages linked below for the documentation for the methods that are implemented in various backend packages.
+adbi::dbQuoteString(&quot;AdbiConnection&quot;, &quot;character&quot;)
+adbi::dbQuoteString(&quot;AdbiConnection&quot;, &quot;SQL&quot;)
 bigrquery::dbQuoteString(&quot;BigQueryConnection&quot;, &quot;character&quot;)
 bigrquery::dbQuoteString(&quot;BigQueryConnection&quot;, &quot;SQL&quot;)
 DatabaseConnector::dbQuoteString(&quot;DatabaseConnectorConnection&quot;, &quot;character&quot;)
@@ -87,7 +91,9 @@ sparklyr::dbQuoteString(&quot;spark_connection&quot;, &quot;character&quot;)
     <p>Call this method to generate a string that is suitable for use in a query as a string literal,
 to make sure that you generate valid SQL and protect against SQL injection attacks.</p>
 <p></p><div class="section">
-<h3 id="methods-in-other-packages">Methods in other packages<a class="anchor" aria-label="anchor" href="#methods-in-other-packages"></a></h3><p>This documentation page describes the generics. Refer to the documentation pages linked below for the documentation for the methods that are implemented in various backend packages.</p><ul><li><p><code><a href="https://bigrquery.r-dbi.org/reference/DBI.html" class="external-link">bigrquery::dbQuoteString("BigQueryConnection", "character")</a></code></p></li>
+<h3 id="methods-in-other-packages">Methods in other packages<a class="anchor" aria-label="anchor" href="#methods-in-other-packages"></a></h3><p>This documentation page describes the generics. Refer to the documentation pages linked below for the documentation for the methods that are implemented in various backend packages.</p><ul><li><p><code><a href="https://adbi.r-dbi.org/reference/AdbiConnection-class.html" class="external-link">adbi::dbQuoteString("AdbiConnection", "character")</a></code></p></li>
+<li><p><code><a href="https://adbi.r-dbi.org/reference/AdbiConnection-class.html" class="external-link">adbi::dbQuoteString("AdbiConnection", "SQL")</a></code></p></li>
+<li><p><code><a href="https://bigrquery.r-dbi.org/reference/DBI.html" class="external-link">bigrquery::dbQuoteString("BigQueryConnection", "character")</a></code></p></li>
 <li><p><code><a href="https://bigrquery.r-dbi.org/reference/DBI.html" class="external-link">bigrquery::dbQuoteString("BigQueryConnection", "SQL")</a></code></p></li>
 <li><p><code>DatabaseConnector::dbQuoteString("DatabaseConnectorConnection", "character")</code></p></li>
 <li><p><code><a href="https://dittodb.jonkeane.com/reference/mock-db-methods.html" class="external-link">dittodb::dbQuoteString("DBIMockMariaDBConnection", "character")</a></code></p></li>

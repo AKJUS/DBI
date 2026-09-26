@@ -4,6 +4,8 @@ The data.frame should have as many rows as there are output fields in the result
 and each column in the data.frame describes an aspect of the result set field (field name, type, etc.)
 
 Methods in other packagesThis documentation page describes the generics. Refer to the documentation pages linked below for the documentation for the methods that are implemented in various backend packages.
+adbi::dbColumnInfo(&quot;AdbiResult&quot;)
+adbi::dbColumnInfo(&quot;AdbiResultArrow&quot;)
 AzureKusto::dbColumnInfo(&quot;AzureKustoResult&quot;)
 bigrquery::dbColumnInfo(&quot;BigQueryResult&quot;)
 DatabaseConnector::dbColumnInfo(&quot;DatabaseConnectorDbiResult&quot;)
@@ -27,6 +29,8 @@ The data.frame should have as many rows as there are output fields in the result
 and each column in the data.frame describes an aspect of the result set field (field name, type, etc.)
 
 Methods in other packagesThis documentation page describes the generics. Refer to the documentation pages linked below for the documentation for the methods that are implemented in various backend packages.
+adbi::dbColumnInfo(&quot;AdbiResult&quot;)
+adbi::dbColumnInfo(&quot;AdbiResultArrow&quot;)
 AzureKusto::dbColumnInfo(&quot;AzureKustoResult&quot;)
 bigrquery::dbColumnInfo(&quot;BigQueryResult&quot;)
 DatabaseConnector::dbColumnInfo(&quot;DatabaseConnectorDbiResult&quot;)
@@ -86,7 +90,9 @@ sparklyr::dbColumnInfo(&quot;DBISparkResult&quot;)
 The data.frame should have as many rows as there are output fields in the result set,
 and each column in the data.frame describes an aspect of the result set field (field name, type, etc.)</p>
 <p></p><div class="section">
-<h3 id="methods-in-other-packages">Methods in other packages<a class="anchor" aria-label="anchor" href="#methods-in-other-packages"></a></h3><p>This documentation page describes the generics. Refer to the documentation pages linked below for the documentation for the methods that are implemented in various backend packages.</p><ul><li><p><code><a href="https://rdrr.io/pkg/AzureKusto/man/DBI_query.html" class="external-link">AzureKusto::dbColumnInfo("AzureKustoResult")</a></code></p></li>
+<h3 id="methods-in-other-packages">Methods in other packages<a class="anchor" aria-label="anchor" href="#methods-in-other-packages"></a></h3><p>This documentation page describes the generics. Refer to the documentation pages linked below for the documentation for the methods that are implemented in various backend packages.</p><ul><li><p><code><a href="https://adbi.r-dbi.org/reference/AdbiResult-class.html" class="external-link">adbi::dbColumnInfo("AdbiResult")</a></code></p></li>
+<li><p><code><a href="https://adbi.r-dbi.org/reference/AdbiResultArrow-class.html" class="external-link">adbi::dbColumnInfo("AdbiResultArrow")</a></code></p></li>
+<li><p><code><a href="https://rdrr.io/pkg/AzureKusto/man/DBI_query.html" class="external-link">AzureKusto::dbColumnInfo("AzureKustoResult")</a></code></p></li>
 <li><p><code><a href="https://bigrquery.r-dbi.org/reference/DBI.html" class="external-link">bigrquery::dbColumnInfo("BigQueryResult")</a></code></p></li>
 <li><p><code><a href="https://ohdsi.github.io/DatabaseConnector/reference/dbColumnInfo-DatabaseConnectorDbiResult-method.html" class="external-link">DatabaseConnector::dbColumnInfo("DatabaseConnectorDbiResult")</a></code></p></li>
 <li><p><code><a href="https://ohdsi.github.io/DatabaseConnector/reference/dbColumnInfo-DatabaseConnectorJdbcResult-method.html" class="external-link">DatabaseConnector::dbColumnInfo("DatabaseConnectorJdbcResult")</a></code></p></li>

@@ -4,6 +4,8 @@ to make sure that you generate valid SQL and protect against SQL injection attac
 The inverse operation is dbUnquoteIdentifier().
 
 Methods in other packagesThis documentation page describes the generics. Refer to the documentation pages linked below for the documentation for the methods that are implemented in various backend packages.
+adbi::dbQuoteIdentifier(&quot;AdbiConnection&quot;, &quot;character&quot;)
+adbi::dbQuoteIdentifier(&quot;AdbiConnection&quot;, &quot;SQL&quot;)
 bigrquery::dbQuoteIdentifier(&quot;BigQueryConnection&quot;, &quot;character&quot;)
 bigrquery::dbQuoteIdentifier(&quot;BigQueryConnection&quot;, &quot;SQL&quot;)
 DatabaseConnector::dbQuoteIdentifier(&quot;DatabaseConnectorConnection&quot;, &quot;character&quot;)
@@ -33,6 +35,8 @@ to make sure that you generate valid SQL and protect against SQL injection attac
 The inverse operation is dbUnquoteIdentifier().
 
 Methods in other packagesThis documentation page describes the generics. Refer to the documentation pages linked below for the documentation for the methods that are implemented in various backend packages.
+adbi::dbQuoteIdentifier(&quot;AdbiConnection&quot;, &quot;character&quot;)
+adbi::dbQuoteIdentifier(&quot;AdbiConnection&quot;, &quot;SQL&quot;)
 bigrquery::dbQuoteIdentifier(&quot;BigQueryConnection&quot;, &quot;character&quot;)
 bigrquery::dbQuoteIdentifier(&quot;BigQueryConnection&quot;, &quot;SQL&quot;)
 DatabaseConnector::dbQuoteIdentifier(&quot;DatabaseConnectorConnection&quot;, &quot;character&quot;)
@@ -98,7 +102,9 @@ sparklyr::dbQuoteIdentifier(&quot;spark_connection&quot;, &quot;character&quot;)
 to make sure that you generate valid SQL and protect against SQL injection attacks.
 The inverse operation is <code><a href="dbUnquoteIdentifier.html">dbUnquoteIdentifier()</a></code>.</p>
 <p></p><div class="section">
-<h3 id="methods-in-other-packages">Methods in other packages<a class="anchor" aria-label="anchor" href="#methods-in-other-packages"></a></h3><p>This documentation page describes the generics. Refer to the documentation pages linked below for the documentation for the methods that are implemented in various backend packages.</p><ul><li><p><code><a href="https://bigrquery.r-dbi.org/reference/DBI.html" class="external-link">bigrquery::dbQuoteIdentifier("BigQueryConnection", "character")</a></code></p></li>
+<h3 id="methods-in-other-packages">Methods in other packages<a class="anchor" aria-label="anchor" href="#methods-in-other-packages"></a></h3><p>This documentation page describes the generics. Refer to the documentation pages linked below for the documentation for the methods that are implemented in various backend packages.</p><ul><li><p><code><a href="https://adbi.r-dbi.org/reference/AdbiConnection-class.html" class="external-link">adbi::dbQuoteIdentifier("AdbiConnection", "character")</a></code></p></li>
+<li><p><code><a href="https://adbi.r-dbi.org/reference/AdbiConnection-class.html" class="external-link">adbi::dbQuoteIdentifier("AdbiConnection", "SQL")</a></code></p></li>
+<li><p><code><a href="https://bigrquery.r-dbi.org/reference/DBI.html" class="external-link">bigrquery::dbQuoteIdentifier("BigQueryConnection", "character")</a></code></p></li>
 <li><p><code><a href="https://bigrquery.r-dbi.org/reference/DBI.html" class="external-link">bigrquery::dbQuoteIdentifier("BigQueryConnection", "SQL")</a></code></p></li>
 <li><p><code>DatabaseConnector::dbQuoteIdentifier("DatabaseConnectorConnection", "character")</code></p></li>
 <li><p><code><a href="https://dittodb.jonkeane.com/reference/mock-db-methods.html" class="external-link">dittodb::dbQuoteIdentifier("DBIMockRPostgresConnection", "character")</a></code></p></li>

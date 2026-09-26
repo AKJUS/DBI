@@ -22,6 +22,8 @@ This documentation page describes the generics. Refer to the
 documentation pages linked below for the documentation for the methods
 that are implemented in various backend packages.
 
+- `adbi::dbSendQueryArrow("AdbiConnection", "ANY")`
+
 - [`duckdb::dbSendQueryArrow("duckdb_connection", "character")`](https://r.duckdb.org/reference/duckdb_connection-class.html)
 
 - `pool::dbSendQueryArrow("Pool", "ANY")`
@@ -142,6 +144,11 @@ warning. The newly opened result set is valid and must be cleared with
 
 The `param` argument allows passing query parameters, see
 [`dbBind()`](https://dbi.r-dbi.org/dev/reference/dbBind.md) for details.
+The schema of the result does not depend on the values bound to a query:
+for a column with a declared type, executing the same query with
+different parameters via
+[`dbBind()`](https://dbi.r-dbi.org/dev/reference/dbBind.md) returns
+chunks whose children have the same names and formats.
 
 ## Specification for the `immediate` argument
 
